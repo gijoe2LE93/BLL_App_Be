@@ -3,7 +3,7 @@ class EventsController < ApplicationController
 
   # GET /events
   def index
-    @events = Event.all
+    @events = Event.where(user_id: params[:user_id])
 
     render json: @events
   end
@@ -16,6 +16,7 @@ class EventsController < ApplicationController
   # POST /events
   def create
     @event = Event.new(event_params)
+    @event.user_id = params[:user_id]
 
     if @event.save
       render json: @event, status: :created, location: @event
