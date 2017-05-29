@@ -3,7 +3,7 @@ class EventsController < ApplicationController
 
   # GET /events
   def index
-    @events = Event.where(user_id: params[:user_id])
+    @events = Event.all
 
     render json: @events
   end
