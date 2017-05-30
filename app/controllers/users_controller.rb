@@ -4,9 +4,7 @@ class UsersController < ApplicationController
   # GET /users
   def index
     @users = User.all.reverse
-
-     render json: {status: 200, user: @users}
-    # render json: @users
+    render json: @users
   end
 
   # GET /users/1
