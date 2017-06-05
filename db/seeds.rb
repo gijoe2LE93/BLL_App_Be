@@ -10,22 +10,36 @@
      User.create(
          name:          'Anthony Simmons',
          email:         'simmonsar@gmail.com',
-         phone:         123.4567990,
-         office:        'none',
-         event_pos:     'none'
+         phone:         222-222-2222,
+         office:        'President',
+         event_pos:     'co-chair'
      )
      User.create(
          name:          'Cedric Facison',
          email:         'Facison@gmail.com',
-         phone:         123.4567990,
-         office:        'none',
-         event_pos:     'none'
+         phone:         666-666-6666,
+         office:        'KRS',
+         event_pos:     'Chair'
      )
      User.create(
          name:          'Russell Newman',
          email:         'Newman@gmail.com',
-         phone:         123.4567990,
-         office:        'none',
+         phone:         111-111-1111,
+         office:        'Keeper of Finance',
+         event_pos:     'none'
+     )
+     User.create(
+         name:          'Charles Adams',
+         email:         'adams@gmail.com',
+         phone:         111-111-1112,
+         office:        'Keeper of Peace',
+         event_pos:     'none'
+     )
+     User.create(
+         name:          'James Bruin',
+         email:         'Bruin@gmail.com',
+         phone:         111-111-1132,
+         office:        'Chaplain',
          event_pos:     'none'
      )
 
@@ -37,19 +51,26 @@
      )
      Event.create(
          title:         'Golf Tournament',
-         price:         50.00,
+         price:         120.00,
          date:          Faker::Time.between(2.days.ago, Date.today, :night),
-         location:      'Vines Mansion'
+         location:      'Trophy Club of Apalachee'
      )
      Event.create(
          title:         'Talent Hunt',
          price:         0.00,
          date:          Faker::Time.between(2.days.ago, Date.today, :night),
-         location:      'Vines Mansion'
+         location:      'Lanier High School'
+
      )
      Event.create(
-         title:         'Jazz on the Green',
+         title:         'Super Bowl Party',
          price:         25.00,
          date:          Faker::Time.between(2.days.ago, Date.today, :night),
-         location:      'Vines Mansion'
+         location:      'Coaxums Restaurant'
+     )
+     Event.create(
+         title:         'Annual Boat Ride',
+         price:         125.00,
+         date:          Faker::Time.between(2.days.ago, Date.today, :night),
+         location:      'Lake Lanier'
      )
